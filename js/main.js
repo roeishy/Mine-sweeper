@@ -35,8 +35,6 @@ function init() {
     gBoard = buildBoard(boardSize, numOfMines);
     printBoard(gBoard, '.board-container');
     printScore();
-    console.log(gBoard)
-    console
 }
 
 
@@ -45,7 +43,6 @@ gets a button element and set the size of the board and number of mines dependin
 */
 function setLevel(elBtn) {
     var level = elBtn.innerText;
-    console.log(level)
     switch (level) {
         case 'easy':
             gGame.level = 'easy';
@@ -138,6 +135,8 @@ function revealCell(elCell) {
     else {
         var mines = cntMinesAround(cell);
         elCell.innerText = mines;
+        if (mines === 0)
+            elCell.innerText = '';
         cell.state = CELL_STATES.NUM;
         gGame.hiddenCnt--;
         if (mines === 0) {
