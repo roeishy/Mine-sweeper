@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="init()">
+    <h1 class="title">Mine Sweeper</h1>
+    <div class="levels">
+        <button onclick="setLevel(this)">easy</button>
+        <button onclick="setLevel(this)">normal</button>
+        <button onclick="setLevel(this)">hard</button>
+    </div>
+    <button class="emoji" onclick="init()"></button>
+    <div class="info">
+        <div class="timer">
+            ⏱
+            <div class="min">00</div>:<div class="sec">00</div>
+
+        </div>
+        <div>💣<span class="mines"></span></div>
+        <div>🏴<span class="marked"></span></div>
+        <div class="lives">
+
+        </div>
+
+    </div>
+
+    <div class="board-container"></div>
+
+
+    <table class="score-board">
+        <tr class="score-board-info">
+            <td>score board</td>
+        </tr>
+        <tr class="score-board-info">
+            <td>dificulty</td>
+            <td>time</td>
+        </tr>
+        <tr>
+            <td>easy</td>
+            <td class="easy"></td>
+        </tr>
+        <tr>
+            <td>normal</td>
+            <td class="normal"></td>
+        </tr>
+        <tr>
+            <td>hard</td>
+            <td class="hard"></td>
+        </tr>
+
+    </table>
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/info.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/mines.js"></script>
+
+</body>
+
+</html>
